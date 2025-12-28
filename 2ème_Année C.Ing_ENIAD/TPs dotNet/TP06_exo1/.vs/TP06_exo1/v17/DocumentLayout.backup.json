@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP06_exo1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E648B-B2DB-4DCC-B680-3875BC94A250}|TP06_exo1\\TP06_exo1.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp06_exo1\\tp06_exo1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB6E648B-B2DB-4DCC-B680-3875BC94A250}|TP06_exo1\\TP06_exo1.csproj|solutionrelative:tp06_exo1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB6E648B-B2DB-4DCC-B680-3875BC94A250}|TP06_exo1\\TP06_exo1.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp06_exo1\\tp06_exo1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB6E648B-B2DB-4DCC-B680-3875BC94A250}|TP06_exo1\\TP06_exo1.csproj|solutionrelative:tp06_exo1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP06_exo1\\TP06_exo1\\Form1.cs",
+              "RelativeDocumentMoniker": "TP06_exo1\\Form1.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP06_exo1\\TP06_exo1\\Form1.cs",
+              "RelativeToolTip": "TP06_exo1\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T15:39:44.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP06_exo1\\TP06_exo1\\Form1.cs",
+              "RelativeDocumentMoniker": "TP06_exo1\\Form1.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP06_exo1\\TP06_exo1\\Form1.cs [Design]",
+              "RelativeToolTip": "TP06_exo1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T15:23:46.938Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

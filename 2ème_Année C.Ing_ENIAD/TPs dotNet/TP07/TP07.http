@@ -1,0 +1,6 @@
+@TP07_HostAddress = http://localhost:5283
+
+GET {{TP07_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

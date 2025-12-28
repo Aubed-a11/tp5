@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Guédalia Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --orange: #f28c28;
+  --orange-dark: #d97706;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+/* HEADER */
+header {
+  background: var(--orange);
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* CONTENU AU DESSUS */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TEXTE */
+.hero h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* NOM RESTO */
+.brand {
+  display: inline-block;
+  background: #fff;
+  color: var(--orange-dark);
+  padding: 6px 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  border: 2px solid var(--orange);
+}
+
+/* BOUTONS */
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px;
+  margin: 12px auto;
+  max-width: 320px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--orange-dark);
+  transform: scale(1.04);
+}
+
+.btn i {
+  font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer {
+  background: #fff;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--orange);
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+  <h1>Guédalia Restaurant</h1>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Le goût authentique<br>de la bonne cuisine</h2>
+
+  <div class="brand">Guédalia</div>
+
+  <div class="buttons">
+    <a href="#menu" class="btn" onclick="commander()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Commandez en ligne
+    </a>
+
+    <a href="https://instagram.com" target="_blank" class="btn">
+      <i class="fab fa-instagram"></i>
+      Instagram
+    </a>
+
+    <a href="https://facebook.com" target="_blank" class="btn">
+      <i class="fab fa-facebook"></i>
+      Facebook
+    </a>
+
+    <a href="#contact" class="btn" onclick="localisation()">
+      <i class="fa-solid fa-location-dot"></i>
+      Trouvez-nous
+    </a>
+
+    <a href="https://wa.me/229XXXXXXXX" target="_blank" class="btn">
+      <i class="fab fa-whatsapp"></i>
+      Contactez-nous
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Menu Guédalia Restaurant · 
+    <a href="#">Plus d’infos</a>
+  </p>
+</footer>
+
+<script>
+/* ===== JAVASCRIPT ===== */
+function commander() {
+  alert("Redirection vers le menu Guédalia 🍽️");
+}
+
+function localisation() {
+  alert("Ouverture de la localisation 📍");
+}
+</script>
+
+</body>
+</html>

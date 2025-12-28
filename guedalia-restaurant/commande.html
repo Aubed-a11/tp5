@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Commander | Guédalia Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+  --orange:#ff8c1a;
+  --orange-dark:#e67300;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{background:#f5f5f5}
+
+/* HEADER */
+header{
+  background:var(--orange);
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* PRODUITS */
+.category{
+  padding:15px;
+}
+
+.category h2{
+  margin-bottom:10px;
+  color:var(--orange-dark);
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:15px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:12px;
+  padding:10px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.product-card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.product-card h3{margin:8px 0}
+.product-card p{color:var(--orange-dark);font-weight:bold}
+
+.product-card button{
+  margin-top:8px;
+  background:var(--orange);
+  border:none;
+  color:#fff;
+  padding:8px;
+  width:100%;
+  border-radius:8px;
+}
+
+/* PANIER */
+.cart{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#fff;
+  border-top:3px solid var(--orange);
+  padding:10px;
+}
+
+.cart h3{text-align:center;color:var(--orange)}
+.cart ul{list-style:none;max-height:150px;overflow:auto}
+.cart li{
+  display:flex;
+  justify-content:space-between;
+  margin:6px 0;
+}
+
+.total{
+  font-weight:bold;
+  text-align:center;
+  margin-top:10px;
+}
+
+/* BOUTONS */
+.actions button{
+  width:100%;
+  margin-top:8px;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-size:1rem;
+  color:#fff;
+}
+
+.whatsapp{background:#25d366}
+.pay{background:var(--orange-dark)}
+</style>
+</head>
+<body>
+
+<header>Commander - Guédalia Restaurant</header>
+
+<!-- Div pour afficher le menu par catégorie -->
+<div id="menu"></div>
+
+<div class="cart">
+  <h3>🛒 Panier</h3>
+  <ul id="cartList"></ul>
+  <div class="total">Total : <span id="total">0</span> FCFA</div>
+
+  <div class="actions">
+    <button class="pay" onclick="pay()">💳 Payer Mobile Money</button>
+    <button class="whatsapp" onclick="sendWhatsApp()">📲 Commander sur WhatsApp</button>
+  </div>
+</div>
+
+<script>
+let products = {
+  entrees: [
+  {name:"Salade verte simple", price:1500, img:"https://images.unsplash.com/photo-1556911073-52527ac4370e"},
+  {name:"Salade parisienne", price:2500, img:"https://images.unsplash.com/photo-1604908177523-1c7a3e2b4f5c"},
+  {name:"Salade fattouche", price:3000, img:"https://images.unsplash.com/photo-1617196033301-2c8fa1b3d6be"},
+  {name:"Salade du chef", price:3500, img:"https://images.unsplash.com/photo-1617196033301-3d9fa1b8c6be"},
+  {name:"Salade d’avocat aux crevettes ou thon", price:4000, img:"https://images.unsplash.com/photo-1617196033301-4d8fa1b9c7be"},
+  {name:"Salade composée", price:4000, img:"https://images.unsplash.com/photo-1617196033301-5d7fa1b7c8ce"},
+  {name:"Salade niçoise", price:4000, img:"https://images.unsplash.com/photo-1617196033301-6c8fa1b6c9de"},
+  {name:"Salade DNC", price:4500, img:"https://images.unsplash.com/photo-1617196033301-7c9fa1b5c0ef"}
+  ],
+  chawarma: [
+    {name:"Chawarma végétarien", price:1500, img:"https://images.unsplash.com/photo-1601924582975-1c2b3d4e5f6a"},
+  {name:"Chawarma kafta viande", price:2000, img:"https://images.unsplash.com/photo-1601924582975-2d3c4b5e6f7a"},
+  {name:"Chawarma poisson", price:2000, img:"https://images.unsplash.com/photo-1601924582975-3e4d5c6f7a8b"},
+  {name:"Chawarma poulet", price:2000, img:"https://images.unsplash.com/photo-1601924582975-4f5e6d7a8b9c"},
+  {name:"Chawarma viande steak", price:2000, img:"https://images.unsplash.com/photo-1601924582975-5g6f7h8i9j0k"},
+  {name:"Chawarma kafta poulet", price:2500, img:"https://images.unsplash.com/photo-1601924582975-6h7i8j9k0l1m"},
+  {name:"Chawarma kafta poulet + fromage", price:2500, img:"https://images.unsplash.com/photo-1601924582975-7i8j9k0l1m2n"},
+  {name:"Chawarma kafta viande + fromage", price:2500, img:"https://images.unsplash.com/photo-1601924582975-8j9k0l1m2n3o"},
+  {name:"Chawarma double kafta viande", price:2500, img:"https://images.unsplash.com/photo-1601924582975-9k0l1m2n3o4p"},
+  {name:"Chawarma DNC - poulet + viande steak", price:3000, img:"https://images.unsplash.com/photo-1601924582975-0l1m2n3o4p5q"},
+  {name:"Chawarma double kafta poulet", price:3000, img:"https://images.unsplash.com/photo-1601924582975-1m2n3o4p5q6r"}
+  ],
+  sandwichs: [
+    {name:"Boulettes de viande", price:2000, img:"https://images.unsplash.com/photo-1601924582975-1a2b3c4d5e6f"},
+  {name:"Crispy sandwich", price:2000, img:"https://images.unsplash.com/photo-1601924582975-2b3c4d5e6f7g"},
+  {name:"Croque monsieur", price:2000, img:"https://images.unsplash.com/photo-1601924582975-3c4d5e6f7g8h"},
+  {name:"Croque madame", price:2000, img:"https://images.unsplash.com/photo-1601924582975-4d5e6f7g8h9i"},
+  {name:"Fahita sandwich", price:2000, img:"https://images.unsplash.com/photo-1601924582975-5e6f7g8h9i0j"},
+  {name:"Hot dog cheese", price:2000, img:"https://images.unsplash.com/photo-1601924582975-6f7g8h9i0j1k"},
+  {name:"Philadelphia", price:2000, img:"https://images.unsplash.com/photo-1601924582975-7g8h9i0j1k2l"},
+  {name:"Sandwich crevettes", price:2000, img:"https://images.unsplash.com/photo-1601924582975-8h9i0j1k2l3m"},
+  {name:"Sandwich langue de boeuf", price:2000, img:"https://images.unsplash.com/photo-1601924582975-9i0j1k2l3m4n"},
+  {name:"Taouk sandwich", price:2000, img:"https://images.unsplash.com/photo-1601924582975-0j1k2l3m4n5o"}
+  ],
+  plats: [
+     {name:"Assiette Chawarma poulet", price:3500, img:"https://images.unsplash.com/photo-1601924582975-1a2b3c4d5e6f"},
+  {name:"Assiette Chawarma viande kafta", price:3500, img:"https://images.unsplash.com/photo-1601924582975-2b3c4d5e6f7g"},
+  {name:"Assiette Chawarma DNC", price:4000, img:"https://images.unsplash.com/photo-1601924582975-3c4d5e6f7g8h"},
+  {name:"Brochette de gésier de dinde", price:3000, img:"https://images.unsplash.com/photo-1601924582975-4d5e6f7g8h9i"},
+  {name:"Brochette de taouk (poulet)", price:4000, img:"https://images.unsplash.com/photo-1601924582975-5e6f7g8h9i0j"},
+  {name:"Brochette de viande", price:4500, img:"https://images.unsplash.com/photo-1601924582975-6f7g8h9i0j1k"},
+  {name:"Brochette DNC (poulet, viande, légumes)", price:5500, img:"https://images.unsplash.com/photo-1601924582975-7g8h9i0j1k2l"},
+  {name:"Choukouya mouton", price:4500, img:"https://images.unsplash.com/photo-1601924582975-8h9i0j1k2l3m"},
+  {name:"Choukouya poulet", price:4500, img:"https://images.unsplash.com/photo-1601924582975-9i0j1k2l3m4n"},
+  {name:"Demi poulet chair grillé", price:4000, img:"https://images.unsplash.com/photo-1601924582975-0j1k2l3m4n5o"},
+  {name:"Demi poulet KFC", price:4500, img:"https://images.unsplash.com/photo-1601924582975-1k2l3m4n5o6p"},
+  {name:"Demi poulet chair sauté aux légumes", price:5000, img:"https://images.unsplash.com/photo-1601924582975-2l3m4n5o6p7q"},
+  {name:"Escalope de poulet nature", price:4000, img:"https://images.unsplash.com/photo-1601924582975-3m4n5o6p7q8r"},
+  {name:"Poulet bicyclette entier grillé", price:4500, img:"https://images.unsplash.com/photo-1601924582975-4n5o6p7q8r9s"},
+  {name:"Lapin grillé sauce BBQ", price:4000, img:"https://images.unsplash.com/photo-1601924582975-5o6p7q8r9s0t"},
+  {name:"Sauté de lapin à la pomme vapeur", price:4500, img:"https://images.unsplash.com/photo-1601924582975-6p7q8r9s0t1u"},
+  {name:"Mouton grillé sauce BBQ", price:4000, img:"https://images.unsplash.com/photo-1601924582975-7q8r9s0t1u2v"},
+  {name:"Steak grillé sauce forestière", price:4500, img:"https://images.unsplash.com/photo-1601924582975-8r9s0t1u2v3w"},
+  {name:"Langue de boeuf grillé sauce au choix", price:4500, img:"https://images.unsplash.com/photo-1601924582975-9s0t1u2v3w4x"},
+  {name:"Crevettes provençales", price:4000, img:"https://images.unsplash.com/photo-1601924582975-0t1u2v3w4x5y"},
+  {name:"Crevettes sautées à l’ail", price:4000, img:"https://images.unsplash.com/photo-1601924582975-1u2v3w4x5y6z"},
+  {name:"Capitaine forestière", price:4500, img:"https://images.unsplash.com/photo-1601924582975-2v3w4x5y6z7a"},
+  {name:"Poisson entier grillé BBQ", price:5000, img:"https://images.unsplash.com/photo-1601924582975-3w4x5y6z7a8b"},
+  {name:"Ignames bouillies à l’omelette", price:4000, img:"https://images.unsplash.com/photo-1601924582975-4x5y6z7a8b9c"}],
+    burgers: 
+    [{name:"Burger végétarien", price:1500, img:"https://images.unsplash.com/photo-1601924582975-vegetarian-burger"},
+  {name:"Hamburger", price:2000, img:"https://images.unsplash.com/photo-1601924582975-hamburger"},
+  {name:"Cheese burger", price:2500, img:"https://images.unsplash.com/photo-1601924582975-cheese-burger"},
+  {name:"Chicken burger", price:2500, img:"https://images.unsplash.com/photo-1601924582975-chicken-burger"},
+  {name:"Fish burger", price:2500, img:"https://images.unsplash.com/photo-1601924582975-fish-burger"},
+  {name:"Double hamburger", price:3000, img:"https://images.unsplash.com/photo-1601924582975-double-hamburger"},
+  {name:"Double cheese burger", price:3000, img:"https://images.unsplash.com/photo-1601924582975-double-cheese-burger"},
+  {name:"Burger DNC", price:3000, img:"https://images.unsplash.com/photo-1601924582975-burger-dnc"} ],
+      pizzas: [   {name:"Pizza marguerite", price:3500, img:"https://images.unsplash.com/photo-1601924582975-pizza-marguerite"},
+  {name:"Pizza hot dog", price:4000, img:"https://images.unsplash.com/photo-1601924582975-pizza-hotdog"},
+  {name:"Pizza pêcheur", price:4500, img:"https://images.unsplash.com/photo-1601924582975-pizza-pecheur"},
+  {name:"Pizza quatre fromages", price:4500, img:"https://images.unsplash.com/photo-1601924582975-pizza-quatre-fromages"},
+  {name:"Pizza mexicaine", price:4500, img:"https://images.unsplash.com/photo-1601924582975-pizza-mexicaine"},
+  {name:"Pizza reine", price:4500, img:"https://images.unsplash.com/photo-1601924582975-pizza-reine"},
+  {name:"Pizza végétarienne", price:4500, img:"https://images.unsplash.com/photo-1601924582975-pizza-vegetarienne"},
+  {name:"Pizza BBQ", price:5000, img:"https://images.unsplash.com/photo-1601924582975-pizza-bbq"},
+  {name:"Pizza quatre saisons", price:5000, img:"https://images.unsplash.com/photo-1601924582975-pizza-quatre-saisons"},
+  {name:"Suggestion du chef", price:5000, img:"https://images.unsplash.com/photo-1601924582975-pizza-chef"},
+  {name:"Pizza DNC", price:5500, img:"https://images.unsplash.com/photo-1601924582975-pizza-dnc"} ],
+        specialitesAfricaines: [ {name:"Sauce asrokouin", price:3500, img:"https://images.unsplash.com/photo-1601924582975-sauce-asrokouin"},
+  {name:"Monyo", price:4000, img:"https://images.unsplash.com/photo-1601924582975-monyo"},
+  {name:"Sauce d’arachide", price:4000, img:"https://images.unsplash.com/photo-1601924582975-sauce-arachide"},
+  {name:"Sauce gombo, crincrin royal", price:4000, img:"https://images.unsplash.com/photo-1601924582975-sauce-gombo"},
+  {name:"Sauce légumes", price:4000, img:"https://images.unsplash.com/photo-1601924582975-sauce-legumes"},
+  {name:"Tête de mouton complet (gbota xin n’sunou)", price:4000, img:"https://images.unsplash.com/photo-1601924582975-tete-mouton"},
+  {name:"Bomiwô au poulet entier", price:4500, img:"https://images.unsplash.com/photo-1601924582975-bomiwo-poulet"},
+  {name:"Couscous royal", price:4500, img:"https://images.unsplash.com/photo-1601924582975-couscous-royal"},
+  {name:"Dakouin", price:4500, img:"https://images.unsplash.com/photo-1601924582975-dakouin"},
+  {name:"Poulet kédjénou", price:4500, img:"https://images.unsplash.com/photo-1601924582975-poulet-kedjenou"},
+  {name:"Poulet yassa", price:4500, img:"https://images.unsplash.com/photo-1601924582975-poulet-yassa"},
+  {name:"Sauce mouton au fromage", price:4500, img:"https://images.unsplash.com/photo-1601924582975-sauce-mouton-fromage"},
+  {name:"Sauce poissons entiers frais", price:5500, img:"https://images.unsplash.com/photo-1601924582975-sauce-poissons-frais"} ], 
+         pates: [ {name:"Spaghetti sauté + omelette", price:1500, img:"https://images.unsplash.com/photo-1601924582975-spaghetti-omelette"},
+  {name:"Spaghetti bolognaise", price:3000, img:"https://images.unsplash.com/photo-1601924582975-spaghetti-bolognaise"},
+  {name:"Spaghetti aux boulettes de viande", price:3000, img:"https://images.unsplash.com/photo-1601924582975-spaghetti-boulettes"},
+  {name:"Spaghetti DNC", price:3500, img:"https://images.unsplash.com/photo-1601924582975-spaghetti-dnc"},
+  {name:"Penne forestière", price:3000, img:"https://images.unsplash.com/photo-1601924582975-penne-forestiere"} ],
+          desserts: [ {name:"Crêpe au sucre", price:1500, img:"https://images.unsplash.com/photo-1601924582975-crepe-sucre"},
+  {name:"Crêpe choco", price:1500, img:"https://images.unsplash.com/photo-1601924582975-crepe-choco"},
+  {name:"Crêpe salée", price:1500, img:"https://images.unsplash.com/photo-1601924582975-crepe-salee"},
+  {name:"Crêpe au jambon fromage", price:2000, img:"https://images.unsplash.com/photo-1601924582975-crepe-jambon-fromage"},
+  {name:"Yaourt déguê couscous mil", price:1500, img:"https://images.unsplash.com/photo-1601924582975-yaourt-degue"},
+  {name:"Déguê au raisin", price:1500, img:"https://images.unsplash.com/photo-1601924582975-degue-raisin"},
+  {name:"Yaourt au acajou", price:1500, img:"https://images.unsplash.com/photo-1601924582975-yaourt-acajou"}], 
+          boissons: [{name:"Possotomè 0,5L", price:500, img:"https://images.unsplash.com/photo-1601924582975-posotome-05L"},
+  {name:"Possotomè 1L", price:1000, img:"https://images.unsplash.com/photo-1601924582975-posotome-1L"},
+  {name:"Fifa 1L", price:1000, img:"https://images.unsplash.com/photo-1601924582975-fifa-1L"},
+  {name:"Comtesse", price:1000, img:"https://images.unsplash.com/photo-1601924582975-comtesse"},
+  {name:"Possotomè gazéifié", price:1000, img:"https://images.unsplash.com/photo-1601924582975-posotome-gazeifie"},
+  {name:"Béninoise", price:700, img:"https://images.unsplash.com/photo-1601924582975-beninoise"},
+  {name:"Beaufort", price:700, img:"https://images.unsplash.com/photo-1601924582975-beaufort"},
+  {name:"Coca-cola", price:600, img:"https://images.unsplash.com/photo-1601924582975-coca-cola"},
+  {name:"Sprite", price:600, img:"https://images.unsplash.com/photo-1601924582975-sprite"},
+  {name:"Youki", price:600, img:"https://images.unsplash.com/photo-1601924582975-youki"},
+  {name:"Kwabo citron 1,3L", price:600, img:"https://images.unsplash.com/photo-1601924582975-kwabo-citron"},
+  {name:"Malta tonic", price:600, img:"https://images.unsplash.com/photo-1601924582975-malta-tonic"},
+  {name:"Moka", price:600, img:"https://images.unsplash.com/photo-1601924582975-moka"}], 
+           jus: [  {name:"Jus de citron", price:1300, img:"https://images.unsplash.com/photo-1601924582975-jus-citron"},
+  {name:"Jus d’ananas", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-ananas"},
+  {name:"Jus de gingembre", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-gingembre"},
+  {name:"Jus de goyave", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-goyave"},
+  {name:"Jus d’orange", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-orange"},
+  {name:"Jus de pastèque", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-pasteque"},
+  {name:"Jus de pomme", price:1500, img:"https://images.unsplash.com/photo-1601924582975-jus-pomme"} ],
+            consoBouteilles: [ {name:"Eku", price:800, img:"https://images.unsplash.com/photo-1601924582975-eku"},
+  {name:"Awoyo", price:1000, img:"https://images.unsplash.com/photo-1601924582975-awoyo"},
+  {name:"Castel", price:1000, img:"https://images.unsplash.com/photo-1601924582975-castel"},
+  {name:"Dopel lager", price:1000, img:"https://images.unsplash.com/photo-1601924582975-dopel-lager"},
+  {name:"Flag", price:1000, img:"https://images.unsplash.com/photo-1601924582975-flag"},
+  {name:"Guiness", price:1000, img:"https://images.unsplash.com/photo-1601924582975-guiness"},
+  {name:"Racines", price:1000, img:"https://images.unsplash.com/photo-1601924582975-racines"},
+  {name:"Tékila bière", price:1000, img:"https://images.unsplash.com/photo-1601924582975-tekila-biere"},
+  {name:"Vody", price:1000, img:"https://images.unsplash.com/photo-1601924582975-vody"},
+  {name:"Heneken", price:1500, img:"https://images.unsplash.com/photo-1601924582975-heineken"},
+  {name:"Savana", price:1500, img:"https://images.unsplash.com/photo-1601924582975-savana"},
+  {name:"Desperado", price:2500, img:"https://images.unsplash.com/photo-1601924582975-desperado"},
+  {name:"Tékila", price:600, img:"https://images.unsplash.com/photo-1601924582975-tekila"},
+  {name:"BOSS", price:1000, img:"https://images.unsplash.com/photo-1601924582975-boss"},
+  {name:"XXL", price:1000, img:"https://images.unsplash.com/photo-1601924582975-xxl"} ],
+              vins: [{name:"Baron Vincent", price:12000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge1"},
+  {name:"Château de Belleville", price:12000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge2"},
+  {name:"Comte de Bothwell", price:12000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge3"},
+  {name:"Calvet (grande réserve)", price:15000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge4"},
+  {name:"La Baume", price:15000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge5"},
+  {name:"La Chrétienne", price:15000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge6"},
+  {name:"Mouton cadet", price:15000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge7"},
+  {name:"Lomiscehenauer", price:17000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge8"},
+  {name:"Duchesse", price:20000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge9"},
+  {name:"Mouton cadet réserve", price:25000, img:"https://images.unsplash.com/photo-1601924582975-vin-rouge10"},
+
+  // Vins blancs
+  {name:"Baron de Cenac moelleux", price:10000, img:"https://images.unsplash.com/photo-1601924582975-vin-blanc1"},
+  {name:"Château de Belleville blanc", price:10000, img:"https://images.unsplash.com/photo-1601924582975-vin-blanc2"},
+  {name:"La Chrétienne moelleux", price:17000, img:"https://images.unsplash.com/photo-1601924582975-vin-blanc3"},
+  {name:"Vin d’Alsace Riesling", price:20000, img:"https://images.unsplash.com/photo-1601924582975-vin-blanc4"},
+
+  // Vins rosés
+  {name:"Côte de Provence", price:17000, img:"https://images.unsplash.com/photo-1601924582975-vin-rose1"},
+  {name:"Rosé d’Anjou", price:18000, img:"https://images.unsplash.com/photo-1601924582975-vin-rose2"},
+  {name:"Listel gris", price:19000, img:"https://images.unsplash.com/photo-1601924582975-vin-rose3"},
+  {name:"Sainte Sidoine", price:25000, img:"https://images.unsplash.com/photo-1601924582975-vin-rose4"},
+
+  // Vins mousseux
+  {name:"Vin mousseux", price:15000, img:"https://images.unsplash.com/photo-1601924582975-vin-mousseux"},
+
+  // Champagnes
+  {name:"Belaire", price:10000, img:"https://images.unsplash.com/photo-1601924582975-champagne1"},
+  {name:"Perlant", price:17000, img:"https://images.unsplash.com/photo-1601924582975-champagne2"},
+  {name:"Castel 1er", price:20000, img:"https://images.unsplash.com/photo-1601924582975-champagne3"},
+  {name:"Cuvée blanche", price:20000, img:"https://images.unsplash.com/photo-1601924582975-champagne4"},
+  {name:"Cuvée Rosée", price:20000, img:"https://images.unsplash.com/photo-1601924582975-champagne5"},
+  {name:"Moët", price:50000, img:"https://images.unsplash.com/photo-1601924582975-champagne6"},
+  {name:"Duchesse", price:60000, img:"https://images.unsplash.com/photo-1601924582975-champagne7"},
+  {name:"Veuve Clicquot", price:70000, img:"https://images.unsplash.com/photo-1601924582975-champagne8"},
+  {name:"Nicolas Feuillatte", price:70000, img:"https://images.unsplash.com/photo-1601924582975-champagne9"},
+  {name:"Ruinart", price:120000, img:"https://images.unsplash.com/photo-1601924582975-champagne10"} ]
+ 
+};
+
+let cart=[];
+
+function displayMenu() {
+  const menuDiv = document.getElementById("menu");
+  for (let category in products) {
+    let categoryDiv = document.createElement("div");
+    categoryDiv.classList.add("category");
+
+    let title = document.createElement("h2");
+    title.textContent = category.toUpperCase();
+    categoryDiv.appendChild(title);
+
+    let productsDiv = document.createElement("div");
+    productsDiv.classList.add("products");
+
+    products[category].forEach(product => {
+      let card = document.createElement("div");
+      card.classList.add("product-card");
+
+      card.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>${product.price} FCFA</p>
+        <button onclick="add('${category}', '${product.name}')">Commander</button>
+      `;
+      productsDiv.appendChild(card);
+    });
+
+    categoryDiv.appendChild(productsDiv);
+    menuDiv.appendChild(categoryDiv);
+  }
+}
+
+// Fonction pour ajouter au panier
+function add(category, productName){
+  const product = products[category].find(p=>p.name===productName);
+  let item = cart.find(c=>c.name===product.name);
+  if(item) item.qty++;
+  else cart.push({...product, qty:1});
+  renderCart();
+}
+
+function renderCart(){
+  let list=document.getElementById("cartList");
+  let total=0;
+  list.innerHTML="";
+  cart.forEach(c=>{
+    total+=c.price*c.qty;
+    list.innerHTML+=`<li>${c.name} x${c.qty} <span>${c.price*c.qty} FCFA</span></li>`;
+  });
+  document.getElementById("total").innerText=total;
+}
+
+function sendWhatsApp(){
+  let msg="Bonjour, je souhaite commander:%0A";
+  cart.forEach(c=>{
+    msg+=`${c.name} x${c.qty} = ${c.price*c.qty} FCFA%0A`;
+  });
+  msg+=`Total: ${document.getElementById("total").innerText} FCFA`;
+  window.open(`https://wa.me/229XXXXXXXX?text=${msg}`,"_blank");
+}
+
+function pay(){
+  alert("Effectuez le paiement Mobile Money puis confirmez sur WhatsApp");
+}
+
+// Affichage du menu
+displayMenu();
+</script>
+
+</body>
+</html>

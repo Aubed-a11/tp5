@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TP04_exo2/1.0.0": {
+        "runtime": {
+          "TP04_exo2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TP04_exo2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

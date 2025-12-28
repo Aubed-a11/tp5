@@ -1,0 +1,10 @@
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.Form1.resources
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.Properties.Resources.resources
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.csproj.GenerateResource.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\bin\Debug\tp5.exe.config
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\bin\Debug\tp5.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\bin\Debug\tp5.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp5\tp5\obj\Debug\tp5.pdb

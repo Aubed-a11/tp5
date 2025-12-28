@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp07\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|solutionrelative:controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp07\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp07\\tp07.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0CE26046-7540-42F5-83EC-878F68BF3A53}|TP07.csproj|solutionrelative:tp07.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodoController.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "Controllers\\TodoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T14:56:30.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TP07",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\TP07.csproj",
+              "RelativeDocumentMoniker": "TP07.csproj",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\TP07.csproj",
+              "RelativeToolTip": "TP07.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-06T10:52:29.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T10:43:50.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP07\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T10:43:45.46Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.exe
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.deps.json
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.runtimeconfig.json
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.dll
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.pdb
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.AssemblyInfo.cs
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.dll
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\refint\TP1_suite.dll
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.pdb
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.genruntimeconfig.cache
+C:\Users\HP\source\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\ref\TP1_suite.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.AssemblyInfo.cs
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\refint\TP1_suite.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.deps.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.runtimeconfig.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\bin\Debug\net8.0\TP1_suite.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\TP1_suite.genruntimeconfig.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\repos\TP1_suite\TP1_suite\obj\Debug\net8.0\ref\TP1_suite.dll

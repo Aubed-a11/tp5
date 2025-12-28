@@ -1,0 +1,10 @@
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\bin\Debug\TP06_exo1.exe.config
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\bin\Debug\TP06_exo1.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\bin\Debug\TP06_exo1.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.Form1.resources
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.Properties.Resources.resources
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.csproj.GenerateResource.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP06_exo1\TP06_exo1\obj\Debug\TP06_exo1.pdb

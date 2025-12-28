@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E845BF85-6A57-4E11-959A-D7E1481AD1B5}|TP2\\TP2.csproj|c:\\users\\hp\\documents\\2\u00E8me_ann\u00E9e c.ing_eniad\\tps dotnet\\tp2\\tp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E845BF85-6A57-4E11-959A-D7E1481AD1B5}|TP2\\TP2.csproj|solutionrelative:tp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP2\\TP2\\Program.cs",
+              "RelativeDocumentMoniker": "TP2\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Documents\\2\u00E8me_Ann\u00E9e C.Ing_ENIAD\\TPs dotNet\\TP2\\TP2\\Program.cs",
+              "RelativeToolTip": "TP2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T02:34:27.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

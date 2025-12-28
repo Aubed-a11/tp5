@@ -1,0 +1,14 @@
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\bin\Debug\net8.0\tp2_exo2.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\bin\Debug\net8.0\tp2_exo2.deps.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\bin\Debug\net8.0\tp2_exo2.runtimeconfig.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\bin\Debug\net8.0\tp2_exo2.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\bin\Debug\net8.0\tp2_exo2.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.AssemblyInfo.cs
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\refint\tp2_exo2.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\tp2_exo2.genruntimeconfig.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\tp2_exo2\tp2_exo2\obj\Debug\net8.0\ref\tp2_exo2.dll

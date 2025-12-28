@@ -1,0 +1,6 @@
+@TP08_HostAddress = http://localhost:5291
+
+GET {{TP08_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

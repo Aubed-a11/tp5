@@ -1,0 +1,14 @@
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.AssemblyInfo.cs
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\bin\Debug\net8.0\TP04.exe
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\bin\Debug\net8.0\TP04.deps.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\bin\Debug\net8.0\TP04.runtimeconfig.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\bin\Debug\net8.0\TP04.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\bin\Debug\net8.0\TP04.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\refint\TP04.dll
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.pdb
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\TP04.genruntimeconfig.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP04\TP04\obj\Debug\net8.0\ref\TP04.dll

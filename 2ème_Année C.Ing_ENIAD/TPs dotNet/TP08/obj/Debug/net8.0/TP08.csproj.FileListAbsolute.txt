@@ -1,0 +1,8 @@
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.AssemblyInfo.cs
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Documents\2ème_Année C.Ing_ENIAD\TPs dotNet\TP08\obj\Debug\net8.0\TP08.MvcApplicationPartsAssemblyInfo.cache
